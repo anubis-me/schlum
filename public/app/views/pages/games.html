@@ -1,0 +1,91 @@
+<!-- Heading -->
+<div class="row text-center">
+    <div class="container">
+        <h2 class="section-heading">Game Search Engine</h2>
+        <h3 class="section-subheading text-muted">This page allows you to perform an advanced search of games in the database.</h3>
+    </div>
+</div>
+
+<br>
+
+<!-- Name Search Box -->
+<div class="navbar-form">
+    <div class="form-group">
+        <input type="text" class="form-control" name="searchByName" placeholder="search by title" ng-model="searchByName">
+    </div>
+</div>
+
+
+<!-- Platform Search Box -->
+<div class="navbar-form">
+    <div class="form-group">
+        <input type="text" class="form-control" name="searchByPlatform" placeholder="Search by Platform..." ng-model="searchByPlatform">
+    </div>
+</div>
+
+<!-- Genre Search Box -->
+<div class="navbar-form">
+    <div class="form-group">
+        <input type="text" class="form-control" name="searchByGenre" placeholder="Search by Genre..." ng-model="searchByGenre">
+    </div>
+</div>
+
+<!-- Search Button -->
+<div class="navbar-form">
+    <button type="button" ng-click="findgame.advancedSearch(searchByPlatform, searchByScore, searchByName);" class="btn btn-outline-success my-2 my-sm-0">Search</button>
+    <br>
+    <br>
+
+</div>
+<div class="navbar-form">
+<button type="button" class="btn btn-danger" ng-click="findgame.sortOrder('title');">Sort by Name</button>
+<button type="button" class="btn btn-danger" ng-click="findgame.sortOrder('score');" >Sort by Score</button>
+<button type="button" class="btn btn-danger" ng-click="findgame.sortOrder('platform');">Sort by Platform</button>
+</div>
+
+<br>
+
+<!-- Search Results -->
+<div ng-show="findgame.searchLimit === undefined">
+    <p><strong>Results: </strong>{{ (findgame.datta | filter: advancedSearchFilter | limitTo: findgame.searchLimit).length }}</p>
+</div>
+
+<div ng-show="findgame.sort">
+    <p><strong>Sort by: </strong>{{findgame.sort }}</p>
+</div>
+
+<br>
+
+<div class="panel ">
+    <!-- Heading -->
+    <div class="panel-heading">
+        <strong style="font-size: 200%;" >Game Details</strong>
+    </div>
+    <!-- Start: Table -->
+    <table class="table" >
+        <tr>
+            <th>Game Name</th>
+            <th>Platform</th>
+            <th>Genre</th>
+            <th>Score</th>
+            <th>Editor_Choice</th>
+            <th>Release Year</th>
+            <th>Url</th>
+        </tr>
+        <tr ng-repeat="person in findgame.datta | filter: advancedSearchFilter | limitTo:50000 | orderBy: findgame.sort">
+            <td>{{ person.title }}</td>
+            <td>{{ person.platform}}</td>
+            <td>{{ person.genre }}</td>
+            <td>{{ person.score }}</td>
+            <td>{{ person.editors_choice }}</td>
+            <td>{{ person.release_year }}</td>
+            <td>{{ person.url }}</td>
+
+        </tr>
+        <!-- End: Table -->
+    </table>
+</div>
+<!-- User findgame Table -->
+
+<br>
+<br>

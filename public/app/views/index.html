@@ -1,0 +1,75 @@
+<head>
+    <base href="/">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- Main Angular Files -->
+    <script src="assets/js/angular.min.js"></script>
+    <script src="assets/js/angular-route.min.js"></script>
+    <script src="assets/js/angular-animate.min.js"></script>
+
+    <!-- Angular Config/Routes -->
+    <script src="app/app.js"></script>
+    <script src="app/routes.js"></script>
+
+    <!-- Angular Controller -->
+    <script src="app/controllers/gameCtrl.js"></script>
+    <script src="app/controllers/loginCtrl.js"></script>
+    <script src="app/controllers/registerctrl.js"></script>
+
+    <!-- Angular Service -->
+    <script src="app/services/gameServices.js"></script>
+    <script src="app/services/loginservice.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+
+    <!-- Cascade Style Sheets -->
+    <link rel="stylesheet"  type="text/css"  href="assets/css/bootstrap.css">
+     <link rel="stylesheet" type="text/css"  href="assets/css/animate.css">
+    <link rel="manifest"                     href="assets/manifest.json">
+
+    <title>SCHLUMBERGER GAME SITE</title>
+
+</head>
+
+
+<body ng-app="gameApp" ng-controller="gameCtrl as findgame" ng-cloak >
+
+
+
+<nav class="navbar navbar-inverse navbar-fixed-bottom" >
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">CogoGame</a>
+        </div>
+        <div class="collapse navbar-collapse" id="myNavbar">
+            <ul class="nav navbar-nav">
+                <li class="active"><a href="/">Home</a></li>
+                <li><a href="/game">Game Search</a></li>
+                <li><a href="/login">Login</a></li>
+                <li><a href="/register">Register</a></li>
+                <li><a href="/contact">Contact</a></li>
+                </ul>
+                </ul>
+
+        </div>
+    </div>
+</nav>
+
+<div >
+    <div ng-view ></div>
+</div>
+<script>$(document).ready(function() {
+    $(".dropdown-toggle").dropdown();
+});</script>
+
+</body>

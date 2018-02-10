@@ -1,0 +1,15 @@
+{
+  "short_name": "GAME SITE",
+  "name": "GAME SITE",
+  "icons": [
+    {
+      "src":"logo.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    }
+  ],
+  "start_url": "/?utm_source=homescreen",
+  "background_color": "#33adff",
+  "theme_color": "#66c2ff",
+  "display": "fullscreen"
+}
