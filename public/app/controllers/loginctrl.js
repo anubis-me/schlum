@@ -1,6 +1,9 @@
 /**
  * Created by abhi on 10-Feb-18.
  */
+/**
+ * Created by abhi on 10-Feb-18.
+ */
 angular.module('loginController',['loginService'])
 
     .controller('doLogin',function ($scope,schl,$timeout,$location) {
@@ -17,7 +20,7 @@ angular.module('loginController',['loginService'])
                         $location.path('/login');
                     }, 2000);
                 }
-                });
-            }
+            });
+        }
 
-        });
+    });
