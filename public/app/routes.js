@@ -7,7 +7,7 @@ var app = angular.module('gameRoutes', ['ngRoute'])
 
             //Home
             .when('/', {
-                templateUrl: 'app/views/pages/home.html'
+                templateUrl: 'app/views/pages/login.html'
             })
             .when('/about', {
                 templateUrl: 'app/views/pages/about.html'
