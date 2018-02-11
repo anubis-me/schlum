@@ -1,5 +1,5 @@
 # SCHLUMBERGER CHALLENGE
-HEROKUAPP LINK :- https://Schlumberger1.herokuapp.com
+HEROKUAPP LINK :- https://schlum1.herokuapp.com
 Angualar
 Json
 Html
